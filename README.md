@@ -1,8 +1,8 @@
 # Project Name
+Bread Breaker
+"Juicy Game" made for MSCH-C200, September 29, 2023
 
-Context and date
-
-Description
+You break bread 
 
 
 ## Implementation
@@ -17,3 +17,4 @@ Which features you included
 
 
 ## Created by
+Lily Sivertson

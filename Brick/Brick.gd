@@ -9,18 +9,29 @@ var powerup_prob = 0.1
 func _ready():
 	randomize()
 	position = new_position
+	if score>=100:
+		$TextureRect.texture=load("res://Assets/swirl.png")
+	elif score>=90:
+		$TextureRect.texture=load("res://Assets/sammich.png")
+	elif score>=70:
+		$TextureRect.texture=load("res://Assets/plaited bread.png")
+	elif score>=50:
+		$TextureRect.texture=load("res://Assets/rye.png")
+	else:
+		$TextureRect.texture=load("res://Assets/baguette 2.0.png")
 
 func _physics_process(_delta):
-	if dying:
+	if dying and not $Flour.emitting:
 		queue_free()
 
 func hit(_ball):
 	die()
 
 func die():
+	$Flour.emitting=true
 	dying = true
 	collision_layer = 0
-	$ColorRect.hide()
+	$TextureRect.hide()
 	Global.update_score(score)
 	if not Global.feverish:
 		Global.update_fever(score)

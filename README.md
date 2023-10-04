@@ -1,13 +1,18 @@
 # Project Name
+Bread Breaker
+Project for MSCH-C220
 
-Context and date
-
-Description
+## Description
+You break bread in a "juicy" twist of the classic game "breakout"
 
 
 ## Implementation
 
-Which features you included
+which features you included:
+	custom art for bricks
+	tweening of bricks upon starting game
+	tweening bricks upon death
+	custom particles (hand drawn)
 
 
 ## References
@@ -16,4 +21,4 @@ Which features you included
 ## Future Development
 
 
-## Created by
+## Created by Lily Sivertson

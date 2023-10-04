@@ -1,6 +1,7 @@
 # Project Name
 Bread Breaker
 Project for MSCH-C220
+October 3, 2023
 
 ## Description
 You break bread in a "juicy" twist of the classic game "breakout"
@@ -21,4 +22,5 @@ which features you included
 ## Future Development
 
 
-## Created by Lily Sivertson
+## Created by 
+Lily Sivertson

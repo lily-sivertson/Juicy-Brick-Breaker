@@ -8,11 +8,11 @@ You break bread in a "juicy" twist of the classic game "breakout"
 
 ## Implementation
 
-which features you included:
-	custom art for bricks
-	tweening of bricks upon starting game
-	tweening bricks upon death
-	custom particles (hand drawn)
+which features you included
+ - custom art for bricks
+ - tweening of bricks upon starting game
+ - tweening bricks upon death
+ - custom particles (hand drawn)
 
 
 ## References

@@ -26,11 +26,11 @@ which features you included:
 
 
 ## References
-Music:
-Song: TV Fire Witch
-Artist: Battle Lava
-Source: Free Music Archive (https://freemusicarchive.org/music/Battle_Lava/)
-License: (CC BY-NC)  
+ - Music:
+ - Song: TV Fire Witch
+ - Artist: Battle Lava
+ - Source: Free Music Archive (https://freemusicarchive.org/music/Battle_Lava/)
+ - License: (CC BY-NC)  
 
 
 ## Future Development

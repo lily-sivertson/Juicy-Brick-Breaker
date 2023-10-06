@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bd5m3yq1k5fx8"]
+[gd_scene load_steps=17 format=3 uid="uid://bd5m3yq1k5fx8"]
 
 [ext_resource type="Script" path="res://Brick/Brick_Container.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dmwf8wjdir6y5" path="res://Paddle/Paddle.tscn" id="2"]
@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://do7pdpjxteg8e" path="res://UI/HUD.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://r1nm10jeqyta" path="res://UI/Instructions.tscn" id="8"]
 [ext_resource type="Script" path="res://Effects/Fever.gd" id="9"]
+[ext_resource type="AudioStream" uid="uid://dnd0orlgq6n8j" path="res://Assets/Battle Lava - TV Fire Witch.mp3" id="10_l5v12"]
+[ext_resource type="AudioStream" uid="uid://dqw4koqj6bjps" path="res://Assets/die.wav" id="11_os85n"]
+[ext_resource type="AudioStream" uid="uid://c7na6vkuivr44" path="res://Assets/wall.wav" id="12_eehsf"]
+[ext_resource type="AudioStream" uid="uid://bn3tqg25lgycq" path="res://Assets/paddle.wav" id="13_c14vv"]
+[ext_resource type="AudioStream" uid="uid://vftrleoy4pgp" path="res://Assets/Brick.wav" id="14_s3kqu"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(200, 1000)
@@ -79,5 +84,21 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Instructions" parent="UI" instance=ExtResource("8")]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_l5v12")
+autoplay = true
+
+[node name="Die_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_os85n")
+
+[node name="Wall_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_eehsf")
+
+[node name="Paddle_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_c14vv")
+
+[node name="Brick_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_s3kqu")
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]

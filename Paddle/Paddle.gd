@@ -22,8 +22,15 @@ func _input(event):
 		target.x += event.relative.x
 
 func hit(_ball):
-	pass
-
+	var paddle_sound = get_node_or_null("/root/Game/Paddle_Sound")
+	if paddle_sound!=null:
+		paddle_sound.play()
+	
+func die():
+	var die_sound = get_node_or_null("/root/Game/Die_Sound")
+	if die_sound != null:
+		die_sound.play()
+	queue_free()
 func powerup(payload):
 	for c in $Powerups.get_children():
 		if c.type == payload.type:

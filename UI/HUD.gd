@@ -9,8 +9,6 @@ func _ready():
 	update_time()
 	update_lives()
 	update_fever()
-	
-
 
 func update_score():
 	$Score.text = "Score: " + str(Global.score)

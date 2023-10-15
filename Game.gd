@@ -25,3 +25,9 @@ func _ready():
 		var Instructions = get_node_or_null("/root/Game/UI/Instructions")
 		if Instructions != null:
 			Instructions.set_instructions(level["name"],level["instructions"])
+		$Fire.use_parent_material=false
+
+
+func _on_timer_timeout():
+	$Fire.use_parent_material=true
+	$Fire.modulate.a=0

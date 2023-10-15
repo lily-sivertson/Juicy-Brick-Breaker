@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://do7pdpjxteg8e"]
+[gd_scene load_steps=5 format=3 uid="uid://do7pdpjxteg8e"]
 
 [ext_resource type="Script" path="res://UI/HUD.gd" id="1"]
+[ext_resource type="Theme" uid="uid://bkn1x8r31h3nn" path="res://Effects/ui.tres" id="2_8uj0x"]
+[ext_resource type="Shader" path="res://Effects/fever.gdshader" id="3_f4tgn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j8yor"]
+shader = ExtResource("3_f4tgn")
+shader_parameter/fireMovement = Vector2(-0.01, -0.5)
+shader_parameter/distortionMovement = Vector2(-0.01, -0.3)
+shader_parameter/normalStrength = 40.0
+shader_parameter/distortionStrength = 0.1
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -25,9 +34,12 @@ color = Color(0, 0, 0, 0.25098)
 
 [node name="Score" type="Label" parent="."]
 layout_mode = 0
-offset_left = 15.0
-offset_right = 215.0
-offset_bottom = 40.0
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 225.0
+offset_bottom = 50.0
+theme = ExtResource("2_8uj0x")
+theme_override_font_sizes/font_size = 20
 text = "Score: "
 vertical_alignment = 1
 
@@ -35,23 +47,29 @@ vertical_alignment = 1
 layout_mode = 0
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -214.0
-offset_right = -14.0
-offset_bottom = 40.0
+offset_left = -224.0
+offset_top = 10.0
+offset_right = -24.0
+offset_bottom = 50.0
+theme = ExtResource("2_8uj0x")
+theme_override_font_sizes/font_size = 20
 text = "Time: "
 horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Fever" type="ProgressBar" parent="."]
+material = SubResource("ShaderMaterial_j8yor")
+use_parent_material = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -150.0
-offset_top = 10.0
+offset_top = 20.0
 offset_right = 150.0
-offset_bottom = 37.0
+offset_bottom = 50.0
 grow_horizontal = 2
+theme = ExtResource("2_8uj0x")
 show_percentage = false
 
 [node name="Indicator_Container" type="Control" parent="."]

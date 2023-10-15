@@ -1,12 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci5q3vmuimsfr"]
+[gd_scene load_steps=3 format=3 uid="uid://ci5q3vmuimsfr"]
 
 [ext_resource type="Script" path="res://UI/Pause_Menu.gd" id="1"]
+[ext_resource type="Theme" uid="uid://bkn1x8r31h3nn" path="res://Effects/ui.tres" id="2_xccn5"]
 
 [node name="Pause_Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -23,6 +26,7 @@ anchor_bottom = 1.0
 offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_xccn5")
 text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -40,6 +44,7 @@ offset_right = 100.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_xccn5")
 text = "Restart Game"
 
 [node name="Quit" type="Button" parent="."]
@@ -55,6 +60,7 @@ offset_right = 100.0
 offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_xccn5")
 text = "Quit"
 
 [connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]

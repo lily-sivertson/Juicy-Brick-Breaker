@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ei3ny6s8bla5"]
+[gd_scene load_steps=4 format=3 uid="uid://ei3ny6s8bla5"]
 
 [ext_resource type="Script" path="res://UI/Main_Menu.gd" id="1"]
+[ext_resource type="Theme" uid="uid://bkn1x8r31h3nn" path="res://Effects/ui.tres" id="2_kbwov"]
+[ext_resource type="Texture2D" uid="uid://catt0d3tm2dx3" path="res://Assets/kitchen.png" id="3_n0801"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -11,17 +13,37 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0, 0, 0, 0.501961)
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kbwov")
+texture = ExtResource("3_n0801")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.490196)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_bottom = -248.0
+theme = ExtResource("2_kbwov")
 theme_override_font_sizes/font_size = 50
 text = "Bread Breaker"
 horizontal_alignment = 1
@@ -40,6 +62,7 @@ offset_right = 100.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_kbwov")
 text = "Play"
 
 [node name="Quit" type="Button" parent="."]
@@ -55,6 +78,7 @@ offset_right = 100.0
 offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_kbwov")
 text = "Quit"
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]

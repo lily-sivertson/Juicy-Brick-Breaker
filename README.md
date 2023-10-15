@@ -1,7 +1,6 @@
 # Project Name
 Bread Breaker
 Project for MSCH-C220
-October 3, 2023
 
 ## Description
 You break bread in a "juicy" twist of the classic game "breakout"
@@ -9,32 +8,33 @@ You break bread in a "juicy" twist of the classic game "breakout"
 
 ## Implementation
 
-<<<<<<< Updated upstream
-which features you included
- - custom art for bricks
- - tweening of bricks upon starting game
- - tweening bricks upon death
- - custom particles (hand drawn)
-=======
 which features you included:
-	custom art for bricks
+	custom art for bricks (hand drawn)
 	tweening of bricks upon starting game
+	fire animation upon starting the game
 	tweening bricks upon death
 	custom particles (hand drawn)
-	music and sound effects
->>>>>>> Stashed changes
-
+	music
+	sound effects
+	comet trail
+	animated indicators
+	screen shake
+	
+	custom background art (hand drawn)
 
 ## References
 Music:
-Song: TV Fire Witch
-Artist: Battle Lava
-Source: Free Music Archive (https://freemusicarchive.org/music/Battle_Lava/)
-License: (CC BY-NC)  
+Song: 7
+Artist: Eggy Toast
+Source: Free Music Archive (https://freemusicarchive.org/music/eggy-toast/game-music/7mp3/)
+License: (CC BY-NC-)  
+
+fire shader: https://godotshaders.com/shader/2d-fire/
+
+font: Bread Idol, https://www.dafont.com/bread-idol.font
 
 
 ## Future Development
 
 
-## Created by 
-Lily Sivertson
+## Created by Lily Sivertson
